@@ -5,24 +5,17 @@ using UnityEngine;
 public class SpawnAfterDestroy : MonoBehaviour
 {
     [SerializeField] SpawnerEnemy spawnerEnemy;
+    [SerializeField] MoveInputTouch moveInput;
     public GameObject enemyPrefabs;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            StartCoroutine(spawnAfterDestroy());
+            if (moveInput.gameOver == false)
+            {
+                StartCoroutine(spawnAfterDestroy());
+            }
         }
     }
 

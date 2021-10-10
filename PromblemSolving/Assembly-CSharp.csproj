@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Bounce.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
+    <Compile Include="Assets\Script\GameoverController.cs" />
     <Compile Include="Assets\Script\MoveInputArrow.cs" />
     <Compile Include="Assets\Script\MoveInputTouch.cs" />
     <Compile Include="Assets\Script\Movement.cs" />
