@@ -6,7 +6,7 @@ public class SpawnerEnemy : MonoBehaviour
 {
     public int minSpawn;
     public int maxSpawn;
-    private int numberToSpawn;
+    public int numberToSpawn;
     public List<GameObject> spawnPool;
     public GameObject spawnArea;
 
@@ -36,10 +36,5 @@ public class SpawnerEnemy : MonoBehaviour
             pos = new Vector2(screenX, screenY);
             Instantiate(toSpawn, pos, toSpawn.transform.rotation);
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D spawnpool)
-    {
-        
     }
 }

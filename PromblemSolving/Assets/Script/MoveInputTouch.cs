@@ -9,27 +9,32 @@ public class MoveInputTouch : MonoBehaviour
     Vector2 lastClickedPos;
     [SerializeField]
     bool moving;
+    public bool gameOver = false;
 
     void Start()
     {
+        gameOver = false;
         Rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (gameOver == false)
         {
-            lastClickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            moving = true;
-        }
-        if (moving && (Vector2)transform.position != lastClickedPos)
-        {
-            float step = speed * Time.deltaTime;
-            transform.position =  Vector2.MoveTowards(transform.position, lastClickedPos, step);
-        }
-        else
-        {
-            moving = false;
+            if (Input.GetMouseButtonDown(0))
+            {
+                lastClickedPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                moving = true;
+            }
+            if (moving && (Vector2)transform.position != lastClickedPos)
+            {
+                float step = speed * Time.deltaTime;
+                transform.position = Vector2.MoveTowards(transform.position, lastClickedPos, step);
+            }
+            else
+            {
+                moving = false;
+            }
         }
     }
 
