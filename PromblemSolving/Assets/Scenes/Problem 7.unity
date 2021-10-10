@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   moving: 0
+  gameOver: 0
 --- !u!23 &106364133
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -286,6 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85df0596bdcd9e54fb27710fa48f940e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minSpawn: 7
+  maxSpawn: 13
   numberToSpawn: 10
   spawnPool:
   - {fileID: 4795761659230771940, guid: 48d322fe78e827e45836c02f60b7b1e4, type: 3}
