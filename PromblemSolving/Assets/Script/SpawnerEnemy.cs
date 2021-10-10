@@ -42,4 +42,9 @@ public class SpawnerEnemy : MonoBehaviour
             Destroy(o);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D spawnpool)
+    {
+        
+    }
 }
