@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\MoveInputArrow.cs" />
     <Compile Include="Assets\Script\MoveInputTouch.cs" />
     <Compile Include="Assets\Script\Movement.cs" />
+    <Compile Include="Assets\Script\SpawnerEnemy.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Z:/Github Repo/Agate-ProblemSolving/PromblemSolving/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
