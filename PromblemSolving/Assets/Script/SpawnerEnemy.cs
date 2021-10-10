@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class SpawnerEnemy : MonoBehaviour
 {
-    public int numberToSpawn;
+    public int minSpawn;
+    public int maxSpawn;
+    private int numberToSpawn;
     public List<GameObject> spawnPool;
     public GameObject spawnArea;
 
-    void Start()
+    void Start() 
     {
+        numberToSpawn = Random.Range(minSpawn, maxSpawn);
         spawnEnemy();
     }
 
@@ -32,14 +35,6 @@ public class SpawnerEnemy : MonoBehaviour
 
             pos = new Vector2(screenX, screenY);
             Instantiate(toSpawn, pos, toSpawn.transform.rotation);
-        }
-    }
-
-    void destroyEnemy()
-    {
-        foreach(GameObject o in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            Destroy(o);
         }
     }
 
